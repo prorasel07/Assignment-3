@@ -1,614 +1,810 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hockey's Club</title>
     <!-- css style link -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <!-- google font "manrope"-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
     />
 
     <!-- font-awesome icon -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
     />
     <!-- daisy cdn  -->
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <!-- navbar start -->
-    <section class="max-w-7xl m-auto px-10">
-      <nav>
+</head>
+<body>
+<!-- navbar start -->
+    <nav class="max-w-7xl m-auto px-10">
         <div class="navbar bg-base-100">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                        >
+                            <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                            />
+                        </svg>
+                    </div>
+                    <ul
+                            tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                    >
+                        <li><a class="text-[#FF4240]">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-xl font-extrabold"
+                >Hockey<span class="text-red-400 text-2xl font-bold">’</span>s</a
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li><a class="text-[#FF4240]">Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Pages</a></li>
-                <li><a>Blog</a></li>
-                <li><a>Contact</a></li>
-              </ul>
             </div>
-            <a class="text-xl font-extrabold"
-              >Hockey<span class="text-red-400 text-2xl font-bold">’</span>s</a
-            >
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-semibold">
-              <li class="text-[#FF4240]"><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Pages</a></li>
-              <li><a>Blog</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <div class="navbar-end gap-4">
-            <a class="text-2xl hidden lg:block" href="#"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
-            <button
-              class="py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
-            >
-              Get Ticket
-            </button>
-          </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 font-semibold">
+                    <li class="text-[#FF4240]"><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end gap-4">
+                <a class="text-2xl hidden lg:block" href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i
+                ></a>
+                <button
+                        class="py-2 sm:py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
+                >
+                    Get Ticket
+                </button>
+            </div>
         </div>
-      </nav>
-    </section>
+    </nav>
 
-    <!-- banner section start -->
-    <section class="max-w-7xl m-auto px-10">
-      <div class="carousel w-full mt-10">
-        <div id="slide1" class="carousel-item relative w-full">
-          <img src="Images/1.png" class="w-full" />
-          <div
-            class="absolute flex gap-3 top-[75%] justify-center lg:justify-between lg:transform lg:-translate-y-1/2 left-5 right-5 lg:top-1/2"
-          >
-            <a href="#slide4" class="btn btn-circle bg-[#131318] text-[white]"
-              >❮</a
+<!-- banner section start -->
+<header class="max-w-7xl m-auto px-10">
+    <div class="carousel w-full mt-10">
+        <div id="slide1" class="carousel-item relative w-full h-[200px]  md:h-[550px] rounded-md overflow-hidden">
+            <img src="Images/1.png" class="w-full"/>
+            <div
+                    class="absolute flex gap-3 top-[75%] justify-center lg:justify-between lg:transform lg:-translate-y-1/2 left-5 right-5 lg:top-1/2"
             >
-            <a href="#slide2" class="btn btn-circle bg-[#131318] text-[white]"
-              >❯</a
+                <a href="#slide2" class=" bg-[#131318] rounded-full w-10 md:w-12 flex items-center justify-center h-10 md:h-12 text-[white]"
+                >❮</a
+                >
+                <a href="#slide2" class=" bg-[#131318] rounded-full w-10 md:w-12 flex items-center justify-center h-10 md:h-12 text-[white]"
+                >❯</a
+                >
+            </div>
+            <div
+                    class="bg-[black] absolute hidden md:block right-8 bottom-8 p-6 rounded-xl max-w-lg"
             >
-          </div>
-          <div
-            class="bg-[black] absolute hidden md:block right-8 bottom-8 p-6 rounded-xl max-w-lg"
-          >
-            <h4 class="font-extrabold text-2xl text-[#FFF] py-4">
-              Meet all the heroes from the field
-            </h4>
-            <p class="font-semibold text-sm text-[#ffffff99]">
-              Dit amet consectetur. Condimentum dignissim adipiscing aliquam
-              turpis placerat dolor. Purus urna in sit nullam proin.
-            </p>
-          </div>
+                <h4 class="font-extrabold text-2xl text-[#FFF] py-4">
+                    Meet all the heroes from the field
+                </h4>
+                <p class="font-semibold text-sm text-[#ffffff99]">
+                    Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                    turpis placerat dolor. Purus urna in sit nullam proin.
+                </p>
+            </div>
         </div>
-      </div>
-      <div class="bg-[black] block md:hidden mt-10 p-6 rounded-xl max-w-lg">
+        <div id="slide2" class="carousel-item relative w-full h-[200px] md:h-[550px] rounded-md overflow-hidden">
+            <img src="Images/play.jpg" class="w-full"/>
+            <div
+                    class="absolute flex gap-3 top-[75%] justify-center lg:justify-between lg:transform lg:-translate-y-1/2 left-5 right-5 lg:top-1/2"
+            >
+                <a href="#slide1" class=" bg-[#131318] rounded-full w-10 md:w-12 flex items-center justify-center h-10 md:h-12 text-[white]"
+                >❮</a
+                >
+                <a href="#slide1" class=" bg-[#131318] rounded-full w-10 md:w-12 flex items-center justify-center h-10 md:h-12 text-[white]"
+                >❯</a
+                >
+            </div>
+            <div
+                    class="bg-[black] absolute hidden md:block right-8 bottom-8 p-6 rounded-xl max-w-lg"
+            >
+                <h4 class="font-extrabold text-2xl text-[#FFF] py-4">
+                    Meet all the heroes from the field
+                </h4>
+                <p class="font-semibold text-sm text-[#ffffff99]">
+                    Dit amet consectetur. Condimentum dignissim adipiscing aliquam
+                    turpis placerat dolor. Purus urna in sit nullam proin.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[black] block md:hidden mt-10 p-6 rounded-xl max-w-lg">
         <h4 class="font-extrabold text-2xl text-[#FFF] py-4">
-          Meet all the heroes from the field
+            Meet all the heroes from the field
         </h4>
         <p class="font-semibold text-sm text-[#ffffff99]">
-          Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis
-          placerat dolor. Purus urna in sit nullam proin.
+            Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis
+            placerat dolor. Purus urna in sit nullam proin.
         </p>
-      </div>
+    </div>
+</header>
+
+<!-- main section start -->
+<main>
+    <!-- Professional Hockeys Club section -->
+    <section class="max-w-7xl m-auto px-10">
+        <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
+            <h2 class="font-extrabold text-4xl">Professional Hockeys Club</h2>
+            <p class="font-semibold text-base max-w-xl m-auto mt-5">
+                People have loved playing as well as watching this game since centuries. Many similar ball games were
+                played in the earlier times.
+            </p>
+        </div>
     </section>
-
-    <!-- main section start -->
-    <main>
-      <!-- Professional Hockeys Club section -->
-      <section class="max-w-7xl m-auto px-10">
-        <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
-          <h2 class="font-extrabold text-4xl">Professional Hockeys Club</h2>
-          <p class="font-semibold text-base max-w-xl m-auto mt-5">
-            People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. 
-          </p>
-        </div>
-      </section>
-      <!-- progress section -->
-      <section class="max-w-7xl m-auto px-10 mb-20">
+    <!-- progress section -->
+    <section class="max-w-7xl m-auto px-10 mb-20">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-20"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center gap-20"
         >
-          <div class="space-y-4">
-            <div
-              class="radial-progress  text-[#FF4240]"
-              style="--value: 87"
-              role="progressbar"
-            >
-              <span class="text-[#131318] text-xl font-extrabold">87%</span>
-            </div>
-            <div>
-              <h2 class="font-semibold text-xl">Prayer Facility</h2>
-              <p class="font-normal text-base">
-                Amet consectetur. Condimentum dignissim adipiscing .
-              </p>
-            </div>
-          </div>
-          <div class="space-y-4">
-            <div
-              class="radial-progress text-[#49D293] text-base-content"
-              style="--value: 95"
-              role="progressbar"
-            >
-              <span class="text-[#131318] text-xl font-extrabold">95%</span>
-            </div>
-            <div>
-              <h2 class="font-semibold text-xl">Experienced Coach</h2>
-              <p class="font-normal text-base">
-                Amet consectetur. Condimentum dignissim adipiscing .
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <div
-              class="radial-progress text-[#FFB546]"
-              style="--value: 90"
-              role="progressbar"
-            >
-              <span class="text-[#131318] text-xl font-extrabold">90%</span>
-            </div>
-            <div>
-              <h2 class="font-semibold text-xl">Senior Player</h2>
-              <p class="font-normal text-base">
-                Amet consectetur. Condimentum dignissim adipiscing .
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <div
-              class="radial-progress text-[#4C8DF1]"
-              style="--value: 80"
-              role="progressbar"
-            >
-              <span class="text-[#131318] text-xl font-extrabold">80%</span>
-            </div>
-            <div>
-              <h2 class="font-semibold text-xl">Training Ground</h2>
-              <p class="font-normal text-base">
-                Amet consectetur. Condimentum dignissim adipiscing .
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Program Sections start -->
-      <section class="max-w-7xl m-auto px-10">
-        <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
-          <h2 class="font-extrabold text-4xl">Program Sections</h2>
-          <p class="font-semibold text-base max-w-xl m-auto mt-5">
-            People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. 
-          </p>
-        </div>
-      </section>
-      <!-- program card section -->
-      <section class="max-w-7xl m-auto px-10">
-        <div class="grid lg:grid-cols-2 gap-6">
-          <div>
-            <div
-              class="grid-cols-1 bg-no-repeat relative w-full z-0 h-[338px] bg-[url('/images/2.png')]"
-            >
-              <div
-                class="h-full w-[573px] -z-30 rounded-[16px] bg-black/30 absolute"
-              ></div>
-              <div class="pt-24 pl-10">
-                <h2 class="text-3xl text-[#FFF] font-extrabold">
-                  Junior Program
-                </h2>
-                <p class="font-medium mb-7 mt-4  text-base text-[#fff]">
-                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
-                  Elitelit enim sagittis turpis in magna. Id et sed euismod
-                  natoque amet nunc morbi nulla. Tortor congue sed et in.
-                </p>
-                <button
-                  class="py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
+            <div class="space-y-4">
+                <div
+                        class="radial-progress  text-[#FF4240]"
+                        style="--value: 87"
+                        role="progressbar"
                 >
-                  Register Now!
-                </button>
-              </div>
+                    <span class="text-[#131318] text-xl font-extrabold">87%</span>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-xl">Prayer Facility</h2>
+                    <p class="font-normal text-base">
+                        Amet consectetur. Condimentum dignissim adipiscing .
+                    </p>
+                </div>
             </div>
-          </div>
-          <div>
-            <div class="col-span-1">
-              <div
-              class="grid-cols-1 bg-no-repeat relative w-full z-0 h-[338px] bg-[url('/images/3.png')]"
-            >
-              <div
-                class="h-full w-[573px] -z-30 rounded-[16px] bg-black/30 absolute"
-              ></div>
-              <div class="pt-24 pl-10">
-                <h2 class="text-3xl text-[#FFF] font-extrabold">
-                  Teenager Program
-                </h2>
-                <p class="font-medium mb-7 mt-4 text-base text-[#fff]">
-                  Dolor sit amet consectetur. Ut urna diam quis sagittis.
-                  Elitelit enim sagittis turpis in magna. Id et sed euismod
-                  natoque amet nunc morbi nulla. Tortor congue sed et in.
-                </p>
-                <button
-                  class="py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
+            <div class="space-y-4">
+                <div
+                        class="radial-progress text-[#49D293] text-base-content"
+                        style="--value: 95"
+                        role="progressbar"
                 >
-                  Register Now!
-                </button>
-              </div>
+                    <span class="text-[#131318] text-xl font-extrabold">95%</span>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-xl">Experienced Coach</h2>
+                    <p class="font-normal text-base">
+                        Amet consectetur. Condimentum dignissim adipiscing .
+                    </p>
+                </div>
             </div>
+
+            <div class="space-y-4">
+                <div
+                        class="radial-progress text-[#FFB546]"
+                        style="--value: 90"
+                        role="progressbar"
+                >
+                    <span class="text-[#131318] text-xl font-extrabold">90%</span>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-xl">Senior Player</h2>
+                    <p class="font-normal text-base">
+                        Amet consectetur. Condimentum dignissim adipiscing .
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="w-full col-span-2">
-            <div class="col-span-2">
-              <div
-              class="grid-cols-1 bg-no-repeat relative w-full z-0 h-[450px] bg-[url('/images/4.png')]">
-              </div>
+
+            <div class="space-y-4">
+                <div
+                        class="radial-progress text-[#4C8DF1]"
+                        style="--value: 80"
+                        role="progressbar"
+                >
+                    <span class="text-[#131318] text-xl font-extrabold">80%</span>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-xl">Training Ground</h2>
+                    <p class="font-normal text-base">
+                        Amet consectetur. Condimentum dignissim adipiscing .
+                    </p>
+                </div>
             </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <!-- our new products section -->
-      <section class="max-w-7xl m-auto px-10">
+    </section>
+    <!-- Program Sections start -->
+    <section class="max-w-7xl m-auto px-10">
         <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
-          <h2 class="font-extrabold text-4xl">Our New Products</h2>
-          <p class="font-semibold text-base max-w-xl m-auto mt-5">
-            People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. 
-          </p>
+            <h2 class="font-extrabold text-4xl">Program Sections</h2>
+            <p class="font-semibold text-base max-w-xl m-auto mt-5">
+                People have loved playing as well as watching this game since centuries. Many similar ball games were
+                played in the earlier times.
+            </p>
         </div>
-      </section>
-      <!-- our new products card section -->
-      <section class="max-w-7xl m-auto px-10">
+    </section>
+    <!-- program card section -->
+    <section class="max-w-7xl m-auto px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <div
+                    class="col-span-1 bg-center rounded-lg bg-no-repeat bg-cover relative w-full z-0 overflow-hidden lg:h-[338px] bg-[url('/Images/2.png')]"
+            >
+                <div
+                        class="h-full w-full  -z-30 rounded-[16px] bg-black/30 absolute"
+                ></div>
+                <div class="pt-5 lg:pt-24 pl-10 p-5">
+                    <h2 class="text-3xl text-[#FFF] font-extrabold">
+                        Junior Program
+                    </h2>
+                    <p class="font-medium mb-2 lg:mb-7 mt-4 text-sm lg:text-base text-[#fff]">
+                        Dolor sit amet consectetur. Ut urna diam quis sagittis.
+                        Elitelit enim sagittis turpis in magna. Id et sed euismod
+                        natoque amet nunc morbi nulla. Tortor congue sed et in.
+                    </p>
+                    <button
+                            class="py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
+                    >
+                        Register Now!
+                    </button>
+                </div>
+            </div>
+
+
+            <div
+                    class="col-span-1 bg-center rounded-lg bg-no-repeat bg-cover relative w-full z-0 overflow-hidden lg:h-[338px] bg-[url('/Images/3.png')]"
+            >
+                <div
+                        class="h-full w-full  -z-30 rounded-[16px] bg-black/30 absolute"
+                ></div>
+                <div class="pt-5 lg:pt-24 pl-10 p-5">
+                    <h2 class="text-3xl text-[#FFF] font-extrabold">
+                        Teenager Program
+                    </h2>
+                    <p class="font-medium mb-2 lg:mb-7 mt-4 text-sm lg:text-base text-[#fff]">
+                        Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                        enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor congue
+                        sed et in.
+                    </p>
+                    <button
+                            class="py-3 px-4 rounded-md bg-[#FF4240] text-white font-semibold text-lg"
+                    >
+                        Register Now!
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 col-span-1 bg-center rounded-lg h-[232px] lg:h-[450px] bg-no-repeat bg-cover relative w-full z-0 overflow-hidden bg-[url('/Images/4.png')]">
+
+                <!--                <div-->
+                <!--                        class=" bg-no-repeat relative w-full z-0 lg:h-[450px] bg-[url('/Images/4.png')]">-->
+                <!--                </div>-->
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- our new products section -->
+    <section class="max-w-7xl m-auto px-10">
+        <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
+            <h2 class="font-extrabold text-4xl">Our New Products</h2>
+            <p class="font-semibold text-base max-w-xl m-auto mt-5">
+                People have loved playing as well as watching this game since centuries. Many similar ball games were
+                played in the earlier times.
+            </p>
+        </div>
+    </section>
+    <!-- our new products card section -->
+    <section class="max-w-7xl m-auto px-10">
         <div class="grid gap-5 lg:grid-cols-2">
-          <!-- card 1 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/5.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 1 start -->
+            <div class="card lg:card-side border border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/5.png"
+                            alt="Movie"
+                    />
+                </figure>
+
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">World Cup Flags Jacket</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">World Cup Flags Jacket</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 1 end -->
-          <!-- card 2 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/6.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 1 end -->
+            <!-- card 2 start -->
+            <div class="card lg:card-side border border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/6.png"
+                            alt="Movie"
+                    />
+                </figure>
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">World Cup Flags Football</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">World Cup Flags Football</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 2 end -->
-          <!-- card 3 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/7.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 2 end -->
+            <!-- card 3 start -->
+            <div class="card lg:card-side border border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/7.png"
+                            alt="Movie"
+                    />
+                </figure>
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">Cap For Hockeys</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">Cap For Hockeys</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 3 end -->
-          <!-- card 4 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/8.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 3 end -->
+            <!-- card 4 start -->
+            <div class="card lg:card-side border border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/8.png"
+                            alt="Movie"
+                    />
+                </figure>
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">World Cup Flags Jerscy</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">World Cup Flags Jerscy</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 4 end -->
-          <!-- card 5 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/9.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 4 end -->
+            <!-- card 5 start -->
+            <div class="card lg:card-side border border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/9.png"
+                            alt="Movie"
+                    />
+                </figure>
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">Cap For Hockeys</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">Cap For Hockeys</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 5 end -->
-          <!-- card 6 start -->
-          <div class="card card-side border pl-6 border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src="Images/10.png"
-                alt="Movie"
-              />
-            </figure>
-            <div class="card-body">
-              <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                  <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
-                  <div>5.0</div>
+            <!-- card 5 end -->
+            <!-- card 6 start -->
+            <div class="card lg:card-side border  border-[#1313181A]  rounded-md bg-base-100 shadow-xl">
+                <figure class="p-6">
+                    <img
+                            class="w-full"
+                            src="Images/10.png"
+                            alt="Movie"
+                    />
+                </figure>
+                <div class="card-body pl-8 lg:pl-0">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#F99808]"><i class="fa-solid fa-star"></i></div>
+                            <div>5.0</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
+                            <div>20</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
+                            <div>200</div>
+                        </div>
+                    </div>
+                    <h2 class="card-title font-extrabold text-lg ">World Cup Flags Football</h2>
+                    <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
+                    <div class="flex items-center gap-5">
+                        <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
+                            <div>Delivery Fee : Free</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-eye"></i></div>
-                  <div>20</div>
-                </div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-regular fa-heart"></i></div>
-                  <div>200</div>
-                </div>
-              </div>
-              <h2 class="card-title font-extrabold text-lg ">World Cup Flags Football</h2>
-              <p>Dolor sit amet consectetur. Ut urna diam quis sagittis.</p>
-              <div class="flex items-center gap-5">
-                <div class="text-[#FF4240] font-extrabold text-lg">Price - $22.00</div>
-                <div class="flex items-center gap-2">
-                  <div class="text-[#13131880]"><i class="fa-solid fa-cart-shopping"></i></div>
-                  <div>Delivery Fee : Free</div>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- card 6 end -->
+            <!-- card 6 end -->
         </div>
-      </section>
-      <!-- client section start -->
-      <section class="max-w-7xl m-auto px-10">
+    </section>
+    <!-- client section start -->
+    <section class="max-w-7xl m-auto px-10">
         <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
-          <h2 class="font-extrabold text-4xl">Clients Question</h2>
-          <p class="font-semibold text-base max-w-xl m-auto mt-5">
-            People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. 
-          </p>
+            <h2 class="font-extrabold text-4xl">Clients Question</h2>
+            <p class="font-semibold text-base max-w-xl m-auto mt-5">
+                People have loved playing as well as watching this game since centuries. Many similar ball games were
+                played in the earlier times.
+            </p>
         </div>
-      </section>
-      <!-- client Accordion section -->
-      <section class="max-w-7xl m-auto px-10">
+    </section>
+    <!-- client Accordion section -->
+    <section class="max-w-7xl m-auto px-10">
         <div class=" border border-[#1313181A] p-8 rounded-md">
-          <div class="flex gap-10">
-            <div class="w-full">
-              <img src="Images/11.png" alt="">
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="w-full">
+                    <img class="w-full lg:w-[441px] lg:h-[470px] h-[190px]" src="Images/11.png" alt="">
+                </div>
+
+                <div>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Our Equipment
+                        </div>
+                        <div class="collapse-content">
+                            <p>Football is one of the most exciting games played world over. It also happens to be one
+                                of the oldest games.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Hockey Training
+                        </div>
+                        <div class="collapse-content">
+                            <p>Football is one of the most exciting games played world over. It also happens </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Private Lessons
+                        </div>
+                        <div class="collapse-content">
+                            <p>Football is one of the most exciting games played world over. It also happens to be one
+                                of the oldest games.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Ski Touring
+                        </div>
+                        <div class="collapse-content">
+                            <p>People have loved playing as well as watching this game since centuries. Many similar
+                                ball games were played in the earlier times. These were known by different names in
+                                different </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Booking
+                        </div>
+                        <div class="collapse-content">
+                            <p>People have loved playing as well as watching this game since centuries. Many </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-xl font-bold text-[#131318]">
+                            Pricings
+                        </div>
+                        <div class="collapse-content">
+                            <p>People have loved playing as well as watching this game since centuries. Many similar
+                                ball games </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" checked="checked" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Our Equipment
-                </div>
-                <div class="collapse-content"> 
-                  <p>Football is one of the most exciting games played world over. It also happens to be one of the oldest games.</p>
-                </div>
-              </div>
-              <hr>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Hockey Training
-                </div>
-                <div class="collapse-content"> 
-                  <p>Football is one of the most exciting games played world over. It also happens </p>
-                </div>
-              </div>
-              <hr>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Private Lessons
-                </div>
-                <div class="collapse-content"> 
-                  <p>Football is one of the most exciting games played world over. It also happens to be one of the oldest games.</p>
-                </div>
-              </div>
-              <hr>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Ski Touring
-                </div>
-                <div class="collapse-content"> 
-                  <p>People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. These were known by different names in different </p>
-                </div>
-              </div>
-              <hr>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Booking
-                </div>
-                <div class="collapse-content"> 
-                  <p>People have loved playing as well as watching this game since centuries. Many  </p>
-                </div>
-              </div>
-              <hr>
-              <div class="collapse collapse-plus">
-                <input type="radio" name="my-accordion-3" /> 
-                <div class="collapse-title text-xl font-bold text-[#131318]">
-                  Pricings
-                </div>
-                <div class="collapse-content"> 
-                  <p>People have loved playing as well as watching this game since centuries. Many similar ball games  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <!-- get in touch section-->
-      <section class="max-w-7xl m-auto px-10">
+    </section>
+    <!-- get in touch section-->
+    <section class="max-w-7xl m-auto px-10">
         <div class="mt-24 mb-24 text-center border-y-2 border-dashed py-8">
-          <h2 class="font-extrabold text-4xl">Get In Touch</h2>
-          <p class="font-semibold text-base max-w-xl m-auto mt-5">
-            People have loved playing as well as watching this game since centuries. Many similar ball games were played in the earlier times. 
-          </p>
+            <h2 class="font-extrabold text-4xl">Get In Touch</h2>
+            <p class="font-semibold text-base max-w-xl m-auto mt-5">
+                People have loved playing as well as watching this game since centuries. Many similar ball games were
+                played in the earlier times.
+            </p>
         </div>
-      </section>
-      <!-- get in touch input from section -->
+    </section>
+    <!-- get in touch input from section -->
+    <section class="max-w-7xl m-auto px-10">
+        <div class="flex flex-col lg:flex-row gap-9">
+            <div class="space-y-8 border-2 p-10 lg:w-[474px] rounded-lg pt-10 border-[#1313181a]">
+                <div class="bg-[#BCED6D1A] p-7 lg:w-[374px] h-[216px] rounded-2xl">
+                    <img class="mb-6" src="Images/Group 1171275317.png" alt="">
+                    <h3 class="text-base text-[#13131866] pb-3">Phone Number</h3>
+                    <h4 class="text-xl font-extrabold text-[131318]">(+62) 123-321-543</h4>
+                </div>
+                <div class="bg-[#FDDD5F1A] p-7 lg:w-[374px] h-[216px] rounded-2xl">
+                    <img class="mb-6" src="Images/Group 1171275318.png" alt="">
+                    <h3 class="text-base text-[#13131866] pb-3">Phone Number</h3>
+                    <h4 class="text-xl font-extrabold text-[131318]">(+62) 123-321-543</h4>
+                </div>
+                <div class="bg-[#629CF31A] p-7 lg:w-[374px] h-[216px] rounded-2xl">
+                    <img class="mb-6" src="Images/Group 1171275321.png" alt="">
+                    <h3 class="text-base text-[#13131866] pb-3">Phone Number</h3>
+                    <h4 class="text-xl font-extrabold text-[131318]">(+62) 123-321-543</h4>
+                </div>
+            </div>
+            <div class="flex-grow space-y-9">
+                <div class="grid  lg:grid-cols-2 gap-6">
+                    <label class="form-control w-full ">
+                        <div>
+                            <span class="label-text text-xl font-bold">Your Name</span>
+                        </div>
+                        <input type="text" placeholder="Enter Your Name"
+                               class="input w-full  bg-gray-100 mt-4"/>
+                    </label>
+                    <label class="form-control w-full">
+                        <div>
+                            <span class="label-text  text-xl font-bold">Your Email</span>
+                        </div>
+                        <input type="text" placeholder="Enter Your Email"
+                               class="input bg-gray-100 w-full mt-4 font-normal"/>
+                    </label>
+                </div>
+                <div class="grid  lg:grid-cols-2 gap-6 mt-7">
+                    <label class="form-control w-full ">
+                        <div>
+                            <span class="label-text text-xl font-bold">Subject</span>
+                        </div>
+                        <input type="text" placeholder="Enter your subject"
+                               class="input w-full max-w-xs bg-gray-100 mt-4"/>
+                    </label>
+                    <label class="form-control w-full max-w-xs">
+                        <div>
+                            <span class="label-text  text-xl font-bold">Phone Number</span>
+                        </div>
+                        <input type="text" placeholder="Enter your phone number"
+                               class="input bg-gray-100 w-full max-w-xs mt-4 font-normal"/>
+                    </label>
+                </div>
+                <div class="mt-6">
+                    <span class="label-text  text-xl font-bold ">Message</span>
+                </div>
+                <textarea rows="14" class="textarea textarea-bordered w-full h-[370px] resize-none bg-gray-100 mt-5"
+                          placeholder="Message"></textarea>
+                <button
+                        class="py-3 px-4 w-full mt-9 rounded-md bg-[#FF4240] text-white font-semibold text-lg">
+                    Send Message
+                </button>
+            </div>
 
+        </div>
+    </section>
+    <!-- social icon section -->
+    <section class="max-w-7xl m-auto px-10">
+        <div class="text-center max-w-7xl bg-gray-100 p-6 rounded-lg mt-12 mb-10">
+            <div class="font-extrabold text-2xl text-[#131318] mb-6">
+                <h2>Social Media</h2>
+            </div>
+            <div class="flex justify-center items-center gap-10 ">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
 
-      <!-- social icon section -->
-      <section class="max-w-7xl m-auto px-10">
-        <div class="text-center w-[1170px]">
-          <div class="font-extrabold text-2xl text-[#131318] mb-6">
-            <h2>Social Media</h2>
-          </div>
-          <div class="flex justify-center items-center gap-10 ">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-github"></i>
-          </div>
-  </body>
+        </div>
+    </section>
+</main>
+    <footer class="bg-[#131318] py-20">
+        <div class="max-w-7xl m-auto grid lg:grid-cols-5 text-white px-10 gap-20">
+            <div class="lg:col-span-2 text-center lg:text-start">
+                <h3 class="text-3xl font-extrabold">Get In Touch</h3>
+                <p class="my-5 text-gray-500 text-base">Dit amet consectetur. Condimentum adipiscing aliquam turpis
+                    placerat dolor. Purus urna in sit nullam proin. </p>
+
+                <ul class="text-base space-y-3 flex flex-col lg:block justify-center items-center">
+                    <li>
+                        <a class="flex items-center gap-2" href="mailto:hockeys@support.com">
+                            <i class="fa-regular fa-envelope text-[#FF4240]"></i>
+                            <span>  hockeys@support.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-2" href="tel:hockeys@support.com">
+                            <i class="fa-solid fa-phone text-[#FF4240]"></i>
+                            <span>(+62) 123-321-543</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="lg:col-span-3">
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-10 ">
+                    <div class="col-span-1 place-self-center lg:place-self-start">
+                        <h3 class="text-xl font-semibold">Company</h3>
+                        <ul class="space-y-5 mt-6">
+                            <li>
+                                <a class="text-base font-normal" href="/about-us">About us</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/leadership">Leadership</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/careers">Careers</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/news-and-article">News & Article</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/legal-notice">Legal Notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-1 place-self-center lg:place-self-start">
+                        <h3 class="text-xl font-semibold">Support</h3>
+                        <ul class="space-y-5 mt-6">
+                            <li>
+                                <a class="text-base font-normal" href="/help-center">Help Center</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/ticket-support">Ticket Support</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/contact-us">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-span-2 lg:col-span-1 place-self-center lg:place-self-start">
+                        <h3 class="text-xl font-semibold">Services</h3>
+                        <ul class="space-y-5 mt-6">
+                            <li>
+                                <a class="text-base font-normal" href="/academy">Academy</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/group-lesson">Group Lesson</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/private-lesson">Private Lesson</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/hockeys-for-kids">Hockeys for kids</a>
+                            </li>
+                            <li>
+                                <a class="text-base font-normal" href="/hockeys-for-adult">Hockeys for Adult</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
